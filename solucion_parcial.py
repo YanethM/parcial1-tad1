@@ -20,10 +20,7 @@ class SolucionParcial:
                             "Ref": {
                                 "value": "DEF234",
                                 "name": "Sample Construction",
-                                        "Address": {
-                                                "city": "Manizales",
-                                                "code_zip": "170002, 170001, 170003, 170004",
-                                            }
+                                "Address": ("Manizales",[170002, 170001, 170003, 170004])
                             }
                     },
                     "LineStatus": "Billable"
@@ -32,3 +29,7 @@ class SolucionParcial:
             ],
             "TotalAmt": 1990.19
             }
+
+
+    def feature_2_parcial(self):
+        print(self.diccionario_parcial["Line"][0]["ExpenseDetail"]["Customer"]["Ref"]["name"])
